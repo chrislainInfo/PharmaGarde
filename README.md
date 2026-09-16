@@ -1,4 +1,4 @@
-# 🟢 PharmaGuard
+# 🟢 PharmaGarde
 
 Site vitrine et API pour la recherche de pharmacies de garde à Brazzaville. PharmaGuard permet aux utilisateurs de localiser rapidement les pharmacies ouvertes dans leur quartier, avec un filtrage par quartier, arrondissement et statut "de garde".
 
