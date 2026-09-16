@@ -1,16 +1,19 @@
 import express from "express";
 import pharmacieRoutes from "./routes/pharmacie.routes.js";
+import cors from 'cors';
+
 
 const app = express();
 
 const PORT = 3000
 
+app.use(cors());
 app.use(express.json());
 
 
 app.get("/", (req, res) => {
     res.json({
-        message: "API PharmaGuard opérationnelle"
+        message: "API PharmaGarde opérationnelle"
     });
 });
 
