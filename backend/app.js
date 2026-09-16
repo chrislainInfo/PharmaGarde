@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     res.json({
-        message: "API PharmaGuard opérationnelle"
+        message: "API PharmaGarde opérationnelle"
     });
 });
 
