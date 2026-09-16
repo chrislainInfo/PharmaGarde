@@ -1,10 +1,12 @@
 import express from "express";
 import pharmacieRoutes from "./routes/pharmacie.routes.js";
+import cors from 'cors';
 
 const app = express();
 
 const PORT = 3000
 
+app.use(cors());
 app.use(express.json());
 
 
