@@ -3,98 +3,837 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmaGuard — Pharmacies de garde</title>
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <meta name="description"
+        content="PharmaGuard vous aide à trouver rapidement les pharmacies de garde à Brazzaville.">
+
+    <title>PharmaGarde— Pharmacies de garde</title>
+    <link rel="icon" href="favicon/favicon.ico" />
+    
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <header class="navbar">
-        <div class="navbar-content">
-            <div class="logo">
-                <span class="logo-icon">➕</span>
-                <span>Pharma<strong>Guard</strong></span>
-            </div>
-            <nav>
-                <a href="#accueil">Accueil</a>
-                <a href="#pharmacies">Pharmacies</a>
-                <a href="#contact">Contact</a>
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="#accueil" class="logo" aria-label="PharmaGuard - Accueil">
+
+                <span class="logo-mark" aria-hidden="true">
+                    +
+                </span>
+
+                <span class="logo-text">
+                    Pharma<span>Guard</span>
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Navigation principale">
+
+                <a href="#accueil" class="active">
+                    Accueil
+                </a>
+
+                <a href="#pharmacies">
+                    Pharmacies
+                </a>
+
+                <a href="#fonctionnement">
+                    Comment ça marche
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
             </nav>
+
+
+            <!-- Menu mobile -->
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Ouvrir le menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
         </div>
+
     </header>
 
-    <section class="hero" id="accueil">
-        <div class="hero-content">
-            <h1>Trouvez une pharmacie de garde<br>près de chez vous</h1>
-            <p>PharmaGuard vous aide à localiser rapidement les pharmacies ouvertes dans votre quartier, jour et nuit.
-            </p>
-        </div>
-    </section>
+
+
+    <!-- ==================================================
+         CONTENU PRINCIPAL
+    =================================================== -->
 
     <main>
-        <section class="filters" id="pharmacies">
-            <div class="filters-content">
-                <div class="filter-group">
-                    <label for="filter-quartier">Quartier</label>
-                    <select id="filter-quartier">
-                        <option value="">Tous les quartiers</option>
-                    </select>
+
+
+        <!-- ==================================================
+             HERO
+        =================================================== -->
+
+        <section class="hero" id="accueil">
+
+            <!-- Image + overlay -->
+            <div class="hero-background" aria-hidden="true"></div>
+
+
+            <div class="container hero-inner">
+
+                <div class="hero-content">
+
+                    <span class="hero-eyebrow">
+
+                        <span class="status-dot" aria-hidden="true"></span>
+
+                        Service de pharmacies de garde
+
+                    </span>
+
+
+                    <h1>
+
+                        Trouvez une pharmacie
+                        <span>près de chez vous.</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Localisez rapidement les pharmacies disponibles
+                        dans votre quartier à Brazzaville, de jour comme de nuit.
+
+                    </p>
+
+
+                    <a href="#pharmacies" class="hero-button">
+
+                        Trouver une pharmacie
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
                 </div>
 
-                <div class="filter-group">
-                    <label for="filter-arrondissement">Arrondissement</label>
-                    <select id="filter-arrondissement">
-                        <option value="">Tous les arrondissements</option>
-                    </select>
-                </div>
 
-                <div class="filter-group filter-toggle">
-                    <label class="switch">
-                        <input type="checkbox" id="filter-garde">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Pharmacies de garde uniquement</span>
-                </div>
+                <!-- Petite carte dans la hero -->
 
-                <button id="reset-filters" class="btn-reset">Réinitialiser</button>
+                <aside class="hero-card">
+
+                    <div class="hero-card-icon" aria-hidden="true">
+                        <span>+</span>
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Votre santé, notre priorité.
+                        </strong>
+
+                        <p>
+                            Des informations accessibles en quelques secondes.
+                        </p>
+
+                    </div>
+
+                </aside>
+
             </div>
+
+
+            <!-- Séparation visuelle de la hero -->
+            <div class="hero-wave" aria-hidden="true"></div>
+
         </section>
 
-        <section class="results">
-            <div class="results-header">
-                <h2>Pharmacies disponibles</h2>
-                <span id="results-count" class="results-count"></span>
+
+
+        <!-- ==================================================
+             STATISTIQUES
+        =================================================== -->
+
+        <section class="quick-stats" aria-label="Informations rapides">
+
+            <div class="container stats-grid">
+
+
+                <!-- Total pharmacies -->
+
+                <article class="stat-item">
+
+                    <div class="stat-icon" aria-hidden="true">
+                        ✚
+                    </div>
+
+                    <div>
+
+                        <strong id="total-pharmacies">
+                            —
+                        </strong>
+
+                        <span>
+                            pharmacies référencées
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Pharmacies de garde -->
+
+                <article class="stat-item">
+
+                    <div class="stat-icon" aria-hidden="true">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <strong id="total-garde">
+                            —
+                        </strong>
+
+                        <span>
+                            pharmacies de garde
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Zones -->
+
+                <article class="stat-item">
+
+                    <div class="stat-icon" aria-hidden="true">
+                        ⌖
+                    </div>
+
+                    <div>
+
+                        <strong id="total-zones">
+                            —
+                        </strong>
+
+                        <span>
+                            zones couvertes
+                        </span>
+
+                    </div>
+
+                </article>
+
             </div>
 
-            <div id="loading" class="loading">Chargement des pharmacies...</div>
-            <div id="error" class="error hidden">Impossible de charger les pharmacies. Vérifiez que l'API est démarrée.
-            </div>
-            <div id="empty" class="empty hidden">Aucune pharmacie ne correspond à ces critères.</div>
-
-            <div id="pharmacies-grid" class="pharmacies-grid"></div>
         </section>
+
+
+
+        <!-- ==================================================
+             SECTION PHARMACIES
+        =================================================== -->
+
+        <section class="pharmacies-section" id="pharmacies">
+
+            <div class="container">
+
+
+                <!-- Titre -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            PHARMACIES
+                        </span>
+
+                        <h2>
+                            Trouvez ce dont vous avez besoin.
+                        </h2>
+
+                        <p>
+                            Recherchez une pharmacie selon votre quartier,
+                            votre arrondissement ou son statut de garde.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Nombre de résultats -->
+
+                    <div class="results-count-wrapper">
+
+                        <span id="results-count" class="results-count">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     BARRE DE RECHERCHE
+                =================================================== -->
+
+                <div class="search-box">
+
+                    <span class="search-icon" aria-hidden="true">
+                        ⌕
+                    </span>
+
+
+                    <input type="search" id="search-pharmacie" placeholder="Rechercher une pharmacie..."
+                        aria-label="Rechercher une pharmacie">
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     FILTRES
+                =================================================== -->
+
+                <div class="filters">
+
+
+                    <!-- Quartier -->
+
+                    <div class="filter-item">
+
+                        <label for="filter-quartier">
+                            Quartier
+                        </label>
+
+                        <select id="filter-quartier">
+
+                            <option value="">
+                                Tous les quartiers
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Arrondissement -->
+
+                    <div class="filter-item">
+
+                        <label for="filter-arrondissement">
+                            Arrondissement
+                        </label>
+
+                        <select id="filter-arrondissement">
+
+                            <option value="">
+                                Tous les arrondissements
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Pharmacies de garde -->
+
+                    <div class="guard-filter">
+
+                        <label class="guard-switch" for="filter-garde">
+
+                            <input type="checkbox" id="filter-garde">
+
+                            <span class="switch-slider"></span>
+
+                        </label>
+
+
+                        <span>
+                            Pharmacies de garde uniquement
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Reset -->
+
+                    <button type="button" id="reset-filters" class="reset-button">
+                        Réinitialiser
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     CHARGEMENT
+                =================================================== -->
+
+                <div id="loading" class="state-message loading">
+
+                    <div class="loader"></div>
+
+                    <p>
+                        Recherche des pharmacies...
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     ERREUR
+                =================================================== -->
+
+                <div id="error" class="state-message error hidden">
+
+                    <div class="state-icon" aria-hidden="true">
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Impossible de charger les pharmacies.
+                        </strong>
+
+                        <p>
+                            Vérifiez que votre API est démarrée
+                            puis réessayez.
+                        </p>
+
+                    </div>
+
+
+                    <button type="button" id="retry-button">
+                        Réessayer
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     AUCUN RÉSULTAT
+                =================================================== -->
+
+                <div id="empty" class="state-message empty hidden">
+
+                    <div class="state-icon" aria-hidden="true">
+                        ⌕
+                    </div>
+
+
+                    <strong>
+                        Aucune pharmacie trouvée
+                    </strong>
+
+
+                    <p>
+                        Essayez de modifier vos critères de recherche.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     GRILLE DES PHARMACIES
+                =================================================== -->
+
+                <div id="pharmacies-grid" class="pharmacies-grid"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             COMMENT ÇA MARCHE
+        =================================================== -->
+
+        <section class="how-section" id="fonctionnement">
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        COMMENT ÇA MARCHE ?
+                    </span>
+
+
+                    <h2>
+                        Trouver une pharmacie,
+                        en quelques secondes.
+                    </h2>
+
+
+                    <p>
+                        PharmaGuard simplifie votre recherche
+                        lorsque vous avez besoin d'une pharmacie.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Étapes -->
+
+                <div class="steps">
+
+
+                    <!-- Étape 1 -->
+
+                    <article class="step">
+
+                        <div class="step-number" aria-hidden="true">
+                            01
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Choisissez votre zone
+                            </h3>
+
+
+                            <p>
+                                Sélectionnez votre quartier ou votre
+                                arrondissement pour afficher les pharmacies
+                                correspondantes.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Étape 2 -->
+
+                    <article class="step">
+
+                        <div class="step-number" aria-hidden="true">
+                            02
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Identifiez une pharmacie de garde
+                            </h3>
+
+
+                            <p>
+                                Activez le filtre « De garde » pour afficher
+                                uniquement les pharmacies actuellement
+                                référencées comme étant de garde.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Étape 3 -->
+
+                    <article class="step">
+
+                        <div class="step-number" aria-hidden="true">
+                            03
+                        </div>
+
+
+                        <div class="step-content">
+
+                            <h3>
+                                Appelez ou localisez
+                            </h3>
+
+
+                            <p>
+                                Consultez les horaires, appelez directement
+                                la pharmacie ou ouvrez son emplacement.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="logo">
-                <span class="logo-icon">➕</span>
-                <span>Pharma<strong>Guard</strong></span>
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="site-footer" id="contact">
+
+        <div class="container footer-content">
+
+
+            <!-- Présentation -->
+
+            <div class="footer-brand">
+
+                <a href="#accueil" class="logo" aria-label="PharmaGuard - Accueil">
+
+                    <span class="logo-mark" aria-hidden="true">
+                        +
+                    </span>
+
+
+                    <span class="logo-text">
+                        Pharma<span>Guard</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Une solution simple pour trouver
+                    une pharmacie de garde à proximité.
+                </p>
+
             </div>
-            <p>&copy; 2026 PharmaGuard — Votre santé, toujours à portée de main.</p>
+
+
+
+            <!-- Navigation -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Navigation
+                </h3>
+
+
+                <a href="#accueil">
+                    Accueil
+                </a>
+
+
+                <a href="#pharmacies">
+                    Pharmacies
+                </a>
+
+
+                <a href="#fonctionnement">
+                    Comment ça marche
+                </a>
+
+            </div>
+
+
+
+            <!-- PharmaGuard -->
+
+            <div class="footer-links">
+
+                <h3>
+                    PharmaGuard
+                </h3>
+
+
+                <a href="#pharmacies">
+                    Trouver une pharmacie
+                </a>
+
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
         </div>
+
+
+
+        <!-- Copyright -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 PharmaGuard. Tous droits réservés.
+                </p>
+
+
+                <p>
+                    Votre santé, toujours à portée de main.
+                </p>
+
+            </div>
+
+        </div>
+
     </footer>
 
+
+
+    <!-- ==================================================
+         MODALE DES HORAIRES
+    =================================================== -->
+
+    <div id="hours-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-pharmacy-name">
+
+        <!-- Fond sombre -->
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+
+        <!-- Fenêtre -->
+
+        <div class="modal-content">
+
+
+            <!-- Fermer -->
+
+            <button type="button" class="modal-close" id="modal-close" aria-label="Fermer la fenêtre des horaires">
+                ×
+            </button>
+
+
+            <!-- Icône -->
+
+            <div class="modal-icon" aria-hidden="true">
+                ◷
+            </div>
+
+
+            <span class="modal-label">
+                HORAIRES
+            </span>
+
+
+            <!-- Nom -->
+
+            <h2 id="modal-pharmacy-name">
+                Pharmacie
+            </h2>
+
+
+            <!-- Adresse -->
+
+            <p id="modal-pharmacy-address" class="modal-address">
+                —
+            </p>
+
+
+
+            <!-- Horaires -->
+
+            <div class="hours-list">
+
+
+                <!-- Ouverture -->
+
+                <div class="hour-row">
+
+                    <span>
+                        Heures d'ouverture
+                    </span>
+
+                    <strong id="modal-opening">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Fermeture -->
+
+                <div class="hour-row">
+
+                    <span>
+                        Heures de fermeture
+                    </span>
+
+                    <strong id="modal-closing">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Statut -->
+
+            <div id="modal-status" class="modal-status">
+                Pharmacie de garde
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
