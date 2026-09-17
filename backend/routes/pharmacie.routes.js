@@ -7,6 +7,7 @@ import {
 
 const router = Router();
 
+
 router.get("/", index);
 
 router.get("/:id", show);
