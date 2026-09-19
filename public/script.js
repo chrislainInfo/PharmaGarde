@@ -1,5 +1,3 @@
-
-
 const API_BASE_URL = "https://pharmagarde-8gfu.onrender.com/api/pharmacies";
 
 
@@ -95,18 +93,12 @@ let currentPharmacies = [];
 // IMAGES
 // =====================================================
 
-
 const pharmacyImages = {
     1: "images/image1.jpg",
-
     2: "images/image2.jpg",
-
     3: "images/image3.jpg",
-
     4: "images/image4.jpg",
-
     5: "images/image5.jpg",
-
     6: "images/image6.jpg"
 };
 
@@ -467,15 +459,14 @@ function renderPharmacies(pharmacies) {
                     </a>
 
 
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=${pharmacie.latitude},${pharmacie.longitude}"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        type="button"
                         class="card-button map-button"
+                        data-route-id="${pharmacie.id}"
                     >
                         ⌖
                         Voir l'itinéraire
-                    </a>
+                    </button>
 
                 </div>
 
@@ -509,6 +500,34 @@ function renderPharmacies(pharmacies) {
 
                     if (pharmacie) {
                         openHoursModal(pharmacie);
+                    }
+                }
+            );
+        });
+
+
+    // Boutons itinéraire
+
+    document
+        .querySelectorAll("[data-route-id]")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const id =
+                        Number(
+                            button.dataset.routeId
+                        );
+
+                    const pharmacie =
+                        allPharmacies.find(
+                            item => item.id === id
+                        );
+
+                    if (pharmacie) {
+                        openPharmacyRoute(pharmacie);
                     }
                 }
             );
@@ -605,6 +624,79 @@ document.addEventListener(
         }
     }
 );
+
+
+// =====================================================
+// GÉOLOCALISATION + ITINÉRAIRE
+// =====================================================
+
+function openPharmacyRoute(pharmacie) {
+
+    if (!navigator.geolocation) {
+
+        alert(
+            "La géolocalisation n'est pas supportée par votre navigateur."
+        );
+
+        return;
+    }
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        (position) => {
+
+            const userLat =
+                position.coords.latitude;
+
+            const userLng =
+                position.coords.longitude;
+
+
+            const pharmacyLat =
+                pharmacie.latitude;
+
+            const pharmacyLng =
+                pharmacie.longitude;
+
+
+            const googleMapsUrl =
+                `https://www.google.com/maps/dir/?api=1` +
+                `&origin=${userLat},${userLng}` +
+                `&destination=${pharmacyLat},${pharmacyLng}`;
+
+
+            window.open(
+                googleMapsUrl,
+                "_blank",
+                "noopener,noreferrer"
+            );
+        },
+
+
+        (error) => {
+
+            console.error(
+                "Erreur de géolocalisation :",
+                error
+            );
+
+
+            if (error.code === error.PERMISSION_DENIED) {
+
+                alert(
+                    "Vous devez autoriser l'accès à votre position pour afficher l'itinéraire."
+                );
+
+            } else {
+
+                alert(
+                    "Impossible de récupérer votre position."
+                );
+            }
+        }
+    );
+}
 
 
 // =====================================================
