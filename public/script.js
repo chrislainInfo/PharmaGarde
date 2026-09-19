@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = "http://localhost:3000/api/pharmacies";
+const API_BASE_URL = "https://pharmagarde-8gfu.onrender.com/api/pharmacies";
 
 
 // =====================================================
