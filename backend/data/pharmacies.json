@@ -1,92 +1,92 @@
 [
     {
         "id": 1,
-        "nom": "Pharmacie La Grâce",
-        "adresse": "Avenue de la Paix",
-        "quartier": "Moungali",
-        "arrondissement": "Moungali",
-        "telephone": "+242 06 000 00 01",
-        "latitude": -4.2634,
-        "longitude": 15.2832,
+        "nom": "Pharmacie Mavré",
+        "adresse": "Centre-ville",
+        "quartier": "Centre-ville",
+        "arrondissement": "Poto-Poto",
+        "telephone": "+242 06 956 17 67",
+        "latitude": -4.2686,
+        "longitude": 15.2834,
         "deGarde": true,
         "horaires": {
             "ouverture": "08:00",
-            "fermeture": "22:00"
+            "fermeture": "19:00"
         }
     },
     {
         "id": 2,
-        "nom": "Pharmacie Saint Michel",
-        "adresse": "Avenue de l'OUA",
-        "quartier": "Poto-Poto",
-        "arrondissement": "Poto-Poto",
-        "telephone": "+242 06 000 00 02",
-        "latitude": -4.2591,
-        "longitude": 15.2918,
+        "nom": "Pharmacie DAPHNE",
+        "adresse": "Rue Mbochi",
+        "quartier": "Ouenzé",
+        "arrondissement": "Ouenzé",
+        "telephone": "+242 06 709 84 46",
+        "latitude": -4.2529,
+        "longitude": 15.2975,
         "deGarde": false,
         "horaires": {
             "ouverture": "08:00",
-            "fermeture": "20:00"
+            "fermeture": "19:00"
         }
     },
     {
         "id": 3,
-        "nom": "Pharmacie Centrale",
-        "adresse": "Avenue Marien Ngouabi",
-        "quartier": "Moungali",
-        "arrondissement": "Moungali",
-        "telephone": "+242 06 000 00 03",
-        "latitude": -4.2678,
-        "longitude": 15.2865,
+        "nom": "Pharmacie Béatitude",
+        "adresse": "Avenue Reine Ngalifourou",
+        "quartier": "Ouenzé",
+        "arrondissement": "Ouenzé",
+        "telephone": "+242 06 965 28 28",
+        "latitude": -4.2468,
+        "longitude": 15.3008,
         "deGarde": true,
         "horaires": {
             "ouverture": "08:00",
-            "fermeture": "23:00"
+            "fermeture": "19:00"
         }
     },
     {
         "id": 4,
-        "nom": "Pharmacie Talangaï",
-        "adresse": "Avenue de la Tsiémé",
-        "quartier": "Talangaï",
-        "arrondissement": "Talangaï",
-        "telephone": "+242 06 000 00 04",
-        "latitude": -4.2187,
-        "longitude": 15.3271,
+        "nom": "Pharmacie Saint-Pierre",
+        "adresse": "Rue Nkouka Batéké",
+        "quartier": "Bacongo",
+        "arrondissement": "Bacongo",
+        "telephone": "+242 06 829 70 55",
+        "latitude": -4.2894,
+        "longitude": 15.2648,
         "deGarde": false,
         "horaires": {
             "ouverture": "08:00",
-            "fermeture": "20:00"
+            "fermeture": "19:00"
         }
     },
     {
         "id": 5,
-        "nom": "Pharmacie Ouenzé",
-        "adresse": "Avenue de la Patte d'Oie",
-        "quartier": "Ouenzé",
-        "arrondissement": "Ouenzé",
-        "telephone": "+242 06 000 00 05",
-        "latitude": -4.2398,
-        "longitude": 15.3004,
+        "nom": "Pharmacie Tahiti",
+        "adresse": "54 Avenue Matsoua",
+        "quartier": "Bacongo",
+        "arrondissement": "Bacongo",
+        "telephone": "+242 06 807 18 25",
+        "latitude": -4.2827,
+        "longitude": 15.2709,
         "deGarde": true,
         "horaires": {
             "ouverture": "08:00",
-            "fermeture": "22:00"
+            "fermeture": "19:00"
         }
     },
     {
         "id": 6,
-        "nom": "Pharmacie Bacongo",
-        "adresse": "Avenue Matsoua",
+        "nom": "Pharmacie de Nuit Prosper",
+        "adresse": "245 Avenue Matsoua",
         "quartier": "Bacongo",
         "arrondissement": "Bacongo",
-        "telephone": "+242 06 000 00 06",
-        "latitude": -4.2881,
-        "longitude": 15.2742,
-        "deGarde": false,
+        "telephone": "+242 06 668 34 36",
+        "latitude": -4.2812,
+        "longitude": 15.2734,
+        "deGarde": true,
         "horaires": {
-            "ouverture": "08:00",
-            "fermeture": "20:00"
+            "ouverture": "18:00",
+            "fermeture": "23:59"
         }
     }
 ]
