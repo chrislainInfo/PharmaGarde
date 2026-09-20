@@ -25,7 +25,6 @@
     --container: 1180px;
 }
 
-
 /* =========================
    RESET
 ========================= */
@@ -67,7 +66,6 @@ img {
     max-width: 100%;
 }
 
-
 /* =========================
    UTILITIES
 ========================= */
@@ -80,7 +78,6 @@ img {
 .hidden {
     display: none !important;
 }
-
 
 /* =========================
    HEADER
@@ -107,7 +104,6 @@ img {
     justify-content: space-between;
     gap: 40px;
 }
-
 
 /* Logo */
 
@@ -144,7 +140,6 @@ img {
 .logo-text span {
     font-weight: 400;
 }
-
 
 /* Navigation */
 
@@ -190,7 +185,6 @@ img {
     width: 100%;
 }
 
-
 /* Mobile menu */
 
 .menu-toggle {
@@ -216,7 +210,6 @@ img {
     background: white;
     border-radius: 10px;
 }
-
 
 /* =========================
    HERO
@@ -247,7 +240,8 @@ img {
             rgba(5, 29, 19, 0.94) 0%,
             rgba(8, 48, 31, 0.82) 45%,
             rgba(10, 55, 36, 0.45) 100%
-        ), url("images/pharma.jpg");
+        ),
+        url("images/pharma.jpg");
 
     background-size: cover;
     background-position: center;
@@ -367,7 +361,6 @@ img {
     font-size: 1.2rem;
 }
 
-
 /* Hero mini card */
 
 .hero-card {
@@ -419,7 +412,6 @@ img {
     font-size: 0.75rem;
 }
 
-
 /* Wave */
 
 .hero-wave {
@@ -437,7 +429,6 @@ img {
 
     clip-path: ellipse(65% 100% at 50% 100%);
 }
-
 
 /* =========================
    STATS
@@ -514,7 +505,6 @@ img {
     font-size: 0.76rem;
 }
 
-
 /* =========================
    PHARMACIES
 ========================= */
@@ -582,7 +572,6 @@ img {
     font-weight: 700;
 }
 
-
 /* Search */
 
 .search-box {
@@ -632,7 +621,6 @@ img {
 
     font-size: 1.45rem;
 }
-
 
 /* Filters */
 
@@ -688,7 +676,6 @@ img {
 .filter-item select:focus {
     border-color: var(--green-500);
 }
-
 
 /* Garde */
 
@@ -763,7 +750,6 @@ img {
     transform: translateX(19px);
 }
 
-
 /* Reset */
 
 .reset-button {
@@ -788,7 +774,6 @@ img {
     border-color: var(--green-500);
     color: var(--green-700);
 }
-
 
 /* =========================
    PHARMACY CARDS
@@ -822,7 +807,6 @@ img {
 
     box-shadow: 0 20px 45px rgba(8, 37, 26, 0.1);
 }
-
 
 /* Image */
 
@@ -860,7 +844,6 @@ img {
     );
 }
 
-
 /* Badge */
 
 .card-badge {
@@ -895,7 +878,6 @@ img {
 .card-badge.closed .card-badge-dot {
     background: #a9aaa9;
 }
-
 
 /* Card body */
 
@@ -949,7 +931,6 @@ img {
     font-size: 0.79rem;
 }
 
-
 /* Card footer */
 
 .card-actions {
@@ -967,6 +948,7 @@ img {
 }
 
 .card-button {
+    width: 100%;
     height: 40px;
 
     display: inline-flex;
@@ -992,18 +974,7 @@ img {
     background: #dfede3;
 }
 
-.call-button {
-    background: var(--green-700);
-    color: white;
-}
-
-.call-button:hover {
-    background: var(--green-800);
-}
-
 .map-button {
-    grid-column: 1 / -1;
-
     background: transparent;
     color: var(--green-700);
 
@@ -1013,7 +984,6 @@ img {
 .map-button:hover {
     background: #f5f8f5;
 }
-
 
 /* =========================
    STATES
@@ -1122,7 +1092,6 @@ img {
     color: var(--text);
 }
 
-
 /* =========================
    HOW SECTION
 ========================= */
@@ -1205,7 +1174,6 @@ img {
     font-size: 0.8rem;
 }
 
-
 /* =========================
    FOOTER
 ========================= */
@@ -1285,7 +1253,6 @@ img {
 
     font-size: 0.7rem;
 }
-
 
 /* =========================
    MODAL HORAIRES
@@ -1463,7 +1430,6 @@ img {
     font-weight: 700;
 }
 
-
 /* =========================
    RESPONSIVE
 ========================= */
@@ -1497,16 +1463,13 @@ img {
     .steps {
         grid-template-columns: 1fr;
     }
-
 }
-
 
 @media (max-width: 760px) {
 
     .container {
         width: min(100% - 28px, var(--container));
     }
-
 
     /* Header */
 
@@ -1553,7 +1516,6 @@ img {
         display: none;
     }
 
-
     /* Hero */
 
     .hero {
@@ -1581,7 +1543,6 @@ img {
         margin-top: 35px;
     }
 
-
     /* Stats */
 
     .stats-grid {
@@ -1599,7 +1560,6 @@ img {
         border-bottom: 0;
     }
 
-
     /* Sections */
 
     .pharmacies-section,
@@ -1614,7 +1574,6 @@ img {
     .results-count-wrapper {
         margin-top: 15px;
     }
-
 
     /* Filters */
 
@@ -1635,7 +1594,6 @@ img {
         width: 100%;
     }
 
-
     /* Cards */
 
     .pharmacies-grid {
@@ -1645,7 +1603,6 @@ img {
     .card-image {
         height: 210px;
     }
-
 
     /* Footer */
 
@@ -1668,9 +1625,7 @@ img {
         flex-direction: column;
         align-items: flex-start;
     }
-
 }
-
 
 @media (max-width: 480px) {
 
@@ -1705,5 +1660,4 @@ img {
     .modal-content {
         padding: 25px;
     }
-
 }

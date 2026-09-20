@@ -1,7 +1,4 @@
-
-
 const API_BASE_URL = "http://localhost:3000/api/pharmacies";
-
 
 // =====================================================
 // ELEMENTS DOM
@@ -33,7 +30,6 @@ const searchInput =
 const retryButton =
     document.getElementById("retry-button");
 
-
 // Statistiques
 
 const totalPharmaciesEl =
@@ -45,7 +41,6 @@ const totalGardeEl =
 const totalZonesEl =
     document.getElementById("total-zones");
 
-
 // Menu
 
 const menuToggle =
@@ -53,7 +48,6 @@ const menuToggle =
 
 const mainNav =
     document.querySelector(".main-nav");
-
 
 // Modal
 
@@ -81,7 +75,6 @@ const modalClosing =
 const modalStatus =
     document.getElementById("modal-status");
 
-
 // =====================================================
 // VARIABLES
 // =====================================================
@@ -90,26 +83,18 @@ let allPharmacies = [];
 
 let currentPharmacies = [];
 
-
 // =====================================================
 // IMAGES
 // =====================================================
 
-
 const pharmacyImages = {
     1: "images/image1.jpg",
-
     2: "images/image2.jpg",
-
     3: "images/image3.jpg",
-
     4: "images/image4.jpg",
-
     5: "images/image5.jpg",
-
     6: "images/image6.jpg"
 };
-
 
 // =====================================================
 // UTILITAIRES
@@ -130,7 +115,6 @@ function formatTime(time) {
     return `${hours}h${minutes}`;
 }
 
-
 function escapeHTML(value) {
 
     return String(value)
@@ -141,7 +125,6 @@ function escapeHTML(value) {
         .replaceAll("'", "&#039;");
 }
 
-
 function getPharmacyImage(pharmacie) {
 
     if (pharmacie.image) {
@@ -151,7 +134,6 @@ function getPharmacyImage(pharmacie) {
     return pharmacyImages[pharmacie.id]
         || "https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=900&q=85";
 }
-
 
 // =====================================================
 // CONSTRUCTION DE L'URL
@@ -185,7 +167,6 @@ function buildQueryParams() {
     return params.toString();
 }
 
-
 // =====================================================
 // CHARGEMENT DES FILTRES
 // =====================================================
@@ -208,7 +189,6 @@ function populateFilters(pharmacies) {
         )
     ].sort();
 
-
     // On vide les anciennes options
     // sauf la première.
 
@@ -224,7 +204,6 @@ function populateFilters(pharmacies) {
         </option>
     `;
 
-
     quartiers.forEach(quartier => {
 
         const option =
@@ -235,7 +214,6 @@ function populateFilters(pharmacies) {
 
         quartierSelect.appendChild(option);
     });
-
 
     arrondissements.forEach(arrondissement => {
 
@@ -248,7 +226,6 @@ function populateFilters(pharmacies) {
         arrondissementSelect.appendChild(option);
     });
 }
-
 
 // =====================================================
 // STATISTIQUES
@@ -271,14 +248,12 @@ function updateStatistics(pharmacies) {
                 .filter(Boolean)
         ).size;
 
-
     totalPharmaciesEl.textContent = total;
 
     totalGardeEl.textContent = totalGarde;
 
     totalZonesEl.textContent = zones;
 }
-
 
 // =====================================================
 // RECHERCHE LOCALE
@@ -312,7 +287,6 @@ function applySearch(pharmacies) {
     });
 }
 
-
 // =====================================================
 // AFFICHAGE DES PHARMACIES
 // =====================================================
@@ -323,7 +297,6 @@ function renderPharmacies(pharmacies) {
 
     currentPharmacies = pharmacies;
 
-
     if (pharmacies.length === 0) {
 
         emptyEl.classList.remove("hidden");
@@ -333,13 +306,10 @@ function renderPharmacies(pharmacies) {
         return;
     }
 
-
     emptyEl.classList.add("hidden");
-
 
     resultsCount.textContent =
         `${pharmacies.length} pharmacie${pharmacies.length > 1 ? "s" : ""}`;
-
 
     pharmacies.forEach(pharmacie => {
 
@@ -348,42 +318,21 @@ function renderPharmacies(pharmacies) {
 
         card.className = "pharmacy-card";
 
-
         const image =
             getPharmacyImage(pharmacie);
 
         const isGarde =
             pharmacie.deGarde === true;
 
-
         const statusText =
             isGarde
                 ? "De garde"
                 : "Fermée";
 
-
         const statusClass =
             isGarde
                 ? ""
                 : "closed";
-
-
-        const opening =
-            formatTime(
-                pharmacie.horaires?.ouverture
-            );
-
-        const closing =
-            formatTime(
-                pharmacie.horaires?.fermeture
-            );
-
-
-        const encodedPhone =
-            encodeURIComponent(
-                pharmacie.telephone || ""
-            );
-
 
         card.innerHTML = `
 
@@ -407,7 +356,6 @@ function renderPharmacies(pharmacies) {
 
             </div>
 
-
             <div class="card-body">
 
                 <div class="card-top">
@@ -417,7 +365,6 @@ function renderPharmacies(pharmacies) {
                     </h3>
 
                 </div>
-
 
                 <div class="card-location">
 
@@ -432,7 +379,6 @@ function renderPharmacies(pharmacies) {
 
                 </div>
 
-
                 <div class="card-phone">
 
                     <span aria-hidden="true">
@@ -445,7 +391,6 @@ function renderPharmacies(pharmacies) {
 
                 </div>
 
-
                 <div class="card-actions">
 
                     <button
@@ -456,16 +401,6 @@ function renderPharmacies(pharmacies) {
                         ◷
                         Horaires
                     </button>
-
-
-                    <a
-                        href="tel:${encodedPhone}"
-                        class="card-button call-button"
-                    >
-                        ☎
-                        Appeler
-                    </a>
-
 
                     <a
                         href="https://www.google.com/maps/search/?api=1&query=${pharmacie.latitude},${pharmacie.longitude}"
@@ -482,10 +417,8 @@ function renderPharmacies(pharmacies) {
             </div>
         `;
 
-
         grid.appendChild(card);
     });
-
 
     // Boutons horaires
 
@@ -515,7 +448,6 @@ function renderPharmacies(pharmacies) {
         });
 }
 
-
 // =====================================================
 // MODALE HORAIRES
 // =====================================================
@@ -528,18 +460,15 @@ function openHoursModal(pharmacie) {
     modalPharmacyAddress.textContent =
         `${pharmacie.adresse}, ${pharmacie.quartier}`;
 
-
     modalOpening.textContent =
         formatTime(
             pharmacie.horaires?.ouverture
         );
 
-
     modalClosing.textContent =
         formatTime(
             pharmacie.horaires?.fermeture
         );
-
 
     if (pharmacie.deGarde) {
 
@@ -564,14 +493,12 @@ function openHoursModal(pharmacie) {
             "#65766e";
     }
 
-
     hoursModal.classList.remove("hidden");
 
     document.body.style.overflow = "hidden";
 
     modalClose.focus();
 }
-
 
 function closeHoursModal() {
 
@@ -580,18 +507,15 @@ function closeHoursModal() {
     document.body.style.overflow = "";
 }
 
-
 modalClose.addEventListener(
     "click",
     closeHoursModal
 );
 
-
 modalOverlay.addEventListener(
     "click",
     closeHoursModal
 );
-
 
 document.addEventListener(
     "keydown",
@@ -605,7 +529,6 @@ document.addEventListener(
         }
     }
 );
-
 
 // =====================================================
 // CHARGEMENT DES PHARMACIES
@@ -623,7 +546,6 @@ async function loadPharmacies(
 
     grid.innerHTML = "";
 
-
     try {
 
         const query =
@@ -631,16 +553,13 @@ async function loadPharmacies(
                 ? buildQueryParams()
                 : "";
 
-
         const url =
             query
                 ? `${API_BASE_URL}?${query}`
                 : API_BASE_URL;
 
-
         const response =
             await fetch(url);
-
 
         if (!response.ok) {
 
@@ -649,14 +568,11 @@ async function loadPharmacies(
             );
         }
 
-
         const result =
             await response.json();
 
-
         const pharmacies =
             result.data || [];
-
 
         if (!withFilters) {
 
@@ -671,18 +587,14 @@ async function loadPharmacies(
             );
         }
 
-
         loadingEl.classList.add("hidden");
-
 
         const searchedPharmacies =
             applySearch(pharmacies);
 
-
         renderPharmacies(
             searchedPharmacies
         );
-
 
     } catch (error) {
 
@@ -691,13 +603,11 @@ async function loadPharmacies(
             error
         );
 
-
         loadingEl.classList.add("hidden");
 
         errorEl.classList.remove("hidden");
     }
 }
-
 
 // =====================================================
 // FILTRES
@@ -708,24 +618,20 @@ function applyFilters() {
     loadPharmacies(true);
 }
 
-
 quartierSelect.addEventListener(
     "change",
     applyFilters
 );
-
 
 arrondissementSelect.addEventListener(
     "change",
     applyFilters
 );
 
-
 gardeCheckbox.addEventListener(
     "change",
     applyFilters
 );
-
 
 // =====================================================
 // RECHERCHE
@@ -745,7 +651,6 @@ searchInput.addEventListener(
         renderPharmacies(filtered);
     }
 );
-
 
 // =====================================================
 // RESET
@@ -767,7 +672,6 @@ resetBtn.addEventListener(
     }
 );
 
-
 // =====================================================
 // RETRY
 // =====================================================
@@ -779,7 +683,6 @@ retryButton.addEventListener(
         loadPharmacies(false);
     }
 );
-
 
 // =====================================================
 // MENU MOBILE
@@ -798,7 +701,6 @@ menuToggle.addEventListener(
         );
     }
 );
-
 
 // Fermer le menu après clic
 
@@ -819,7 +721,6 @@ document
             }
         );
     });
-
 
 // =====================================================
 // LANCEMENT
