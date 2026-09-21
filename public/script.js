@@ -409,7 +409,7 @@ function renderPharmacies(pharmacies) {
                         class="card-button map-button"
                     >
                         ⌖
-                        Voir l'itinéraire
+                        Voir la localisation
                     </a>
 
                 </div>
