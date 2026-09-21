@@ -1,28 +1,13 @@
 [
     {
         "id": 1,
-        "nom": "Pharmacie Mavré",
-        "adresse": "Centre-ville",
-        "quartier": "Centre-ville",
-        "arrondissement": "Poto-Poto",
-        "telephone": "+242 06 956 17 67",
-        "latitude": -4.2686,
-        "longitude": 15.2834,
-        "deGarde": true,
-        "horaires": {
-            "ouverture": "08:00",
-            "fermeture": "19:00"
-        }
-    },
-    {
-        "id": 2,
-        "nom": "Pharmacie DAPHNE",
-        "adresse": "Rue Mbochi",
-        "quartier": "Ouenzé",
-        "arrondissement": "Ouenzé",
-        "telephone": "+242 06 709 84 46",
-        "latitude": -4.2529,
-        "longitude": 15.2975,
+        "nom": "Pharmacie Mazayu",
+        "adresse": "Kinsoundi",
+        "quartier": "Kinsoundi",
+        "arrondissement": "Makélékélé",
+        "telephone": "+242 06 762 80 00",
+        "latitude": -4.3025,
+        "longitude": 15.2515,
         "deGarde": false,
         "horaires": {
             "ouverture": "08:00",
@@ -30,14 +15,14 @@
         }
     },
     {
-        "id": 3,
-        "nom": "Pharmacie Béatitude",
-        "adresse": "Avenue Reine Ngalifourou",
-        "quartier": "Ouenzé",
-        "arrondissement": "Ouenzé",
-        "telephone": "+242 06 965 28 28",
-        "latitude": -4.2468,
-        "longitude": 15.3008,
+        "id": 2,
+        "nom": "Pharmacie La Providence",
+        "adresse": "966 Avenue Fulbert Youlou",
+        "quartier": "Makélékélé",
+        "arrondissement": "Makélékélé",
+        "telephone": "+242 06 950 48 36",
+        "latitude": -4.2991,
+        "longitude": 15.2597,
         "deGarde": true,
         "horaires": {
             "ouverture": "08:00",
@@ -45,9 +30,9 @@
         }
     },
     {
-        "id": 4,
+        "id": 3,
         "nom": "Pharmacie Saint-Pierre",
-        "adresse": "Rue Nkouka Batéké",
+        "adresse": "6 Rue Nkouka Batéké",
         "quartier": "Bacongo",
         "arrondissement": "Bacongo",
         "telephone": "+242 06 829 70 55",
@@ -60,7 +45,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 4,
         "nom": "Pharmacie Tahiti",
         "adresse": "54 Avenue Matsoua",
         "quartier": "Bacongo",
@@ -75,18 +60,333 @@
         }
     },
     {
-        "id": 6,
-        "nom": "Pharmacie de Nuit Prosper",
-        "adresse": "245 Avenue Matsoua",
-        "quartier": "Bacongo",
+        "id": 5,
+        "nom": "Pharmacie La Glacière",
+        "adresse": "OCH, C3/4, La Glacière",
+        "quartier": "La Glacière",
         "arrondissement": "Bacongo",
-        "telephone": "+242 06 668 34 36",
-        "latitude": -4.2812,
-        "longitude": 15.2734,
+        "telephone": "+242 06 668 54 07",
+        "latitude": -4.2862,
+        "longitude": 15.2684,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 6,
+        "nom": "Pharmacie Mavré",
+        "adresse": "Immeuble CNSS, Rond-Point City Center",
+        "quartier": "Centre-ville",
+        "arrondissement": "Poto-Poto",
+        "telephone": "+242 06 956 17 67",
+        "latitude": -4.2686,
+        "longitude": 15.2834,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 7,
+        "nom": "Pharmacie Van Der Veecken",
+        "adresse": "Avenue de la Paix",
+        "quartier": "Poto-Poto",
+        "arrondissement": "Poto-Poto",
+        "telephone": "+242 04 417 29 70",
+        "latitude": -4.2649,
+        "longitude": 15.2867,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 8,
+        "nom": "Pharmacie Cristale",
+        "adresse": "129 Rue de Reims, Rond-point La Coupole",
+        "quartier": "Poto-Poto",
+        "arrondissement": "Poto-Poto",
+        "telephone": "+242 06 692 58 10",
+        "latitude": -4.2677,
+        "longitude": 15.2920,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 9,
+        "nom": "Pharmacie du Centre",
+        "adresse": "Face au CHU de Brazzaville",
+        "quartier": "Poto-Poto",
+        "arrondissement": "Poto-Poto",
+        "telephone": "+242 06 668 54 07",
+        "latitude": -4.2672,
+        "longitude": 15.2768,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 10,
+        "nom": "Pharmacie Aureole",
+        "adresse": "43 Avenue Maya Maya",
+        "quartier": "Moungali",
+        "arrondissement": "Moungali",
+        "telephone": "+242 06 650 00 00",
+        "latitude": -4.2523,
+        "longitude": 15.2792,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 11,
+        "nom": "Pharmacie Bikoumou",
+        "adresse": "Avenue Lyautey, face au Stade d'Ornano, OCH",
+        "quartier": "OCH",
+        "arrondissement": "Moungali",
+        "telephone": "+242 05 526 45 19",
+        "latitude": -4.2572,
+        "longitude": 15.2747,
         "deGarde": true,
         "horaires": {
             "ouverture": "18:00",
             "fermeture": "23:59"
+        }
+    },
+    {
+        "id": 12,
+        "nom": "Pharmacie Jagger",
+        "adresse": "1247 Avenue Loutassi",
+        "quartier": "Plateau des 15 ans",
+        "arrondissement": "Moungali",
+        "telephone": "+242 05 551 00 16",
+        "latitude": -4.2506,
+        "longitude": 15.2692,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "18:00",
+            "fermeture": "23:59"
+        }
+    },
+    {
+        "id": 13,
+        "nom": "Pharmacie La Clémence",
+        "adresse": "Boueta Mbongo",
+        "quartier": "Moungali",
+        "arrondissement": "Moungali",
+        "telephone": "+242 06 663 85 01",
+        "latitude": -4.2468,
+        "longitude": 15.2787,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 14,
+        "nom": "Pharmacie DAPHNE",
+        "adresse": "Rue Mbochi",
+        "quartier": "Ouenzé",
+        "arrondissement": "Ouenzé",
+        "telephone": "+242 06 709 84 46",
+        "latitude": -4.2529,
+        "longitude": 15.2975,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 15,
+        "nom": "Pharmacie Béatitude",
+        "adresse": "125 Rue Tsaba",
+        "quartier": "Ouenzé",
+        "arrondissement": "Ouenzé",
+        "telephone": "+242 06 965 28 28",
+        "latitude": -4.2468,
+        "longitude": 15.3008,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 16,
+        "nom": "Pharmacie Mampassi",
+        "adresse": "208 Bis Rue Lagué",
+        "quartier": "Ouenzé",
+        "arrondissement": "Ouenzé",
+        "telephone": "+242 05 551 03 29",
+        "latitude": -4.2479,
+        "longitude": 15.3060,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 17,
+        "nom": "Pharmacie Adèle",
+        "adresse": "3 Avenue des Trois Martyrs",
+        "quartier": "Talangaï",
+        "arrondissement": "Talangaï",
+        "telephone": "+242 06 944 74 49",
+        "latitude": -4.2327,
+        "longitude": 15.3035,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 18,
+        "nom": "Pharmacie Vert d'Ô",
+        "adresse": "27 Rue Ndolo, croisement Avenue Marien Ngouabi",
+        "quartier": "Talangaï",
+        "arrondissement": "Talangaï",
+        "telephone": "+242 05 549 55 26",
+        "latitude": -4.2248,
+        "longitude": 15.3074,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 19,
+        "nom": "Pharmacie Terminus Mikalou",
+        "adresse": "En face du marché Mikalou, Avenue Marien Ngouabi",
+        "quartier": "Mikalou",
+        "arrondissement": "Talangaï",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.2119,
+        "longitude": 15.3137,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 20,
+        "nom": "Pharmacie Bethesda",
+        "adresse": "Rond-point Mouhoumi, Avenue Ngamaba",
+        "quartier": "Ngamaba",
+        "arrondissement": "Mfilou",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.2679,
+        "longitude": 15.2320,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 21,
+        "nom": "Pharmacie Konix",
+        "adresse": "03 Avenue Mpiaka Diata",
+        "quartier": "Mfilou",
+        "arrondissement": "Mfilou",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.2752,
+        "longitude": 15.2248,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 22,
+        "nom": "Pharmacie La Base",
+        "adresse": "Quartier La Base",
+        "quartier": "La Base",
+        "arrondissement": "Mfilou",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.2590,
+        "longitude": 15.2148,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 23,
+        "nom": "Pharmacie Affi",
+        "adresse": "69 Avenue Mafouta",
+        "quartier": "Madibou",
+        "arrondissement": "Madibou",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.3310,
+        "longitude": 15.2705,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 24,
+        "nom": "Pharmacie Tsiomo Odilon Aubin",
+        "adresse": "01 Rue Bwalonga, Mayanga Zone B52",
+        "quartier": "Mayanga",
+        "arrondissement": "Madibou",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.3267,
+        "longitude": 15.2488,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
+        }
+    },
+    {
+        "id": 25,
+        "nom": "Pharmacie Antony",
+        "adresse": "Route Nationale N2",
+        "quartier": "Djiri",
+        "arrondissement": "Djiri",
+        "telephone": "+242 06 000 00 00",
+        "latitude": -4.1940,
+        "longitude": 15.3190,
+        "deGarde": true,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "20:00"
+        }
+    },
+    {
+        "id": 26,
+        "nom": "Pharmacie La Fredina",
+        "adresse": "Rond-point Manianga",
+        "quartier": "Manianga",
+        "arrondissement": "Djiri",
+        "telephone": "+242 05 382 35 63",
+        "latitude": -4.1849,
+        "longitude": 15.3208,
+        "deGarde": false,
+        "horaires": {
+            "ouverture": "08:00",
+            "fermeture": "19:00"
         }
     }
 ]
