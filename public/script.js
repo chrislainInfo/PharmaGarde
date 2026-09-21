@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000/api/pharmacies";
+const API_BASE_URL = "https://pharmagarde-8gfu.onrender.com/api/pharmacies";
 
 // =====================================================
 // ELEMENTS DOM
@@ -131,7 +131,7 @@ function getPharmacyImage(pharmacie) {
         return pharmacie.image;
     }
 
-    return pharmacyImages[pharmacie.id]
+    return pharmacyImages[((pharmacie.id - 1) % 6) + 1]
         || "https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=900&q=85";
 }
 
